@@ -4,15 +4,11 @@ This is a **fully responsive** personal branding website, created for a college-
 It serves as a portfolio to showcase my **profile**, **skills**, and **achievements** along with a working contact form with basic form validation.
 The design is clean, modern, and fully responsive across all devices.
 
----
-
 ## 🛠 Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript (vanilla)
-
----
 
 ## ✨ Features
 - 👤 Profile card in the **About** section
@@ -22,8 +18,6 @@ The design is clean, modern, and fully responsive across all devices.
 - 🌙 **Dark Mode** toggle for better user experience
 - 📱 Fully **responsive design** for mobile and desktop
 - 🎨 Smooth transitions and hover effects
-
----
 
 ## 📸 Screenshots
 
