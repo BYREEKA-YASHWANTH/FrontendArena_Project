@@ -20,9 +20,6 @@ The design is clean, modern, and fully responsive across all devices.
 - 🎨 Smooth transitions and hover effects
 
 ## 📸 Screenshots
-These following screenshots of website are included:
-![Home Page](website_images/Home_Page_Screenshot.png)
-![About Section]
-![Skills Section]
-![Contact Form]
-![Full Page Screenshot]
+The screenshots are available in the Repository Files section above.
+Please scroll up to see them directly.
+
