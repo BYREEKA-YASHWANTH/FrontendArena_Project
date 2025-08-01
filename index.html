@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yashwanth Reddy - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+<h1>Yashwanth</h1>
+<ul>
+     <div style="display: flex; align-items: center; gap: 1.5rem;">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button id="darkModeToggle">Toggle Dark Mode</button>
+  </div>
+</nav>
+
+
+<!-- Home Section -->
+<section id="home">
+<h2>Hi, I'm Yashwanth Reddy</h2>
+<p>A passionate student and aspiring web developer from Telangana.</p>
+</section>
+
+<section id="project-description">
+<h2>About This Page</h2>
+<p>This is a simple personal webpage created to introduce myself and showcase my basic skills and interests.</p>
+<p>It includes my educational background, technical skills, and future goals in the tech domain. Along with the technologies I’m currently learning as part of my journey into frontend development.</p>
+<p> It's my first step into the world of web development! </p>
+</section>
+
+<!-- About Section -->
+<section id="about">
+<h2>About Me</h2>
+<div class="about-card">
+<img src="https://i.ibb.co/yn4Rn6Mg/0002.jpg" alt="Profile Photo" class="profile-pic">
+
+<div class="education">
+<h3>Education</h3>
+<p>Schooling | Telangana State Board</p>
+<p>Intermediate | Telangana State Inter Board</p>
+<p>Engineering (CSE) | KLH University</p>
+<p>Interested in pursuing Robotics and AI in the future.</p>
+</div>
+
+<div class="bio">
+<p>I’m currently pursuing my education in KLH University, Bachupally and have a strong interest in programming, creative technologies, and anime-inspired design thinking.</p>
+<p>I enjoy building simple websites and exploring new tools to bring my ideas to life.</p>
+<p>Right now, I’m learning frontend development with HTML, CSS, and JavaScript to start creating better user experiences.</p>
+</div>
+</div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="skill-container">
+<div class="skill-bar" data-skill="90%">
+<span class="skill-name">HTML</span>
+<div class="skill-level"><div class="skill-fill"></div></div>
+</div>
+<div class="skill-bar" data-skill="80%">
+<span class="skill-name">CSS</span>
+<div class="skill-level"><div class="skill-fill"></div></div>
+</div>
+<div class="skill-bar" data-skill="70%">
+<span class="skill-name">JavaScript</span>
+<div class="skill-level"><div class="skill-fill"></div></div>
+</div>
+<div class="skill-bar" data-skill="80%">
+<span class="skill-name">Creative thinking & design</span>
+<div class="skill-level"><div class="skill-fill"></div></div>
+</div>
+<!-- Add more as needed -->
+</div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements">
+<h2>My Achievements</h2>
+<div class="achievement-list">
+<div class="achievement">
+<h3>🏅 NSTSE Medalist (6th & 8th Grade)</h3>
+<p>Secured top positions and medals in the National Level Science Talent Search Examination, showcasing strong academic aptitude in STEM.</p>
+</div>
+<div class="achievement">
+<h3>🎨 2nd Place – Drawing Competition (Forest Dept.)</h3>
+<p>Awarded second prize in a district-level art competition conducted by the Forest Department on the theme “Save Tigers.”</p>
+</div>
+<div class="achievement">
+<h3>📚 9.8 GPA in 10th Grade (SSC Board)</h3>
+<p>Consistently performed well in academics, scoring a near-perfect GPA in Telangana State Board exams.</p>
+</div>
+<div class="achievement">
+<h3>💻 Edunet Foundation AI Internship (2025)</h3>
+<p>Selected for a national-level virtual internship focused on Artificial Intelligence and Green Technology, hosted by Edunet Foundation.</p>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+<h2>Contact Me</h2>
+<form onsubmit="alert('Form submitted! (Not real yet)'); return false;">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit">Send</button>
+</form>
+</section>
+
+<script>
+  // Dark Mode Toggle
+  const toggle = document.getElementById('darkModeToggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+
+  // Animate Skill Bars
+  const skillBars = document.querySelectorAll('.skill-bar');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        bar.classList.add('show');
+        const fill = bar.querySelector('.skill-fill');
+        const targetWidth = bar.getAttribute('data-skill');
+        fill.style.width = targetWidth;
+        observer.unobserve(bar);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  skillBars.forEach(bar => observer.observe(bar));
+</script>
+
+
+<footer>
+<p>© 2025 Yashwanth Reddy | <a href="mailto:yashwanthreddybyreeka@email.com">Email </a> College Email: 24200303707@klh.edu.in | <a href="https://github.com/BYREEKA-YASHWANTH" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+</footer>
+
+</body>
+</html>
