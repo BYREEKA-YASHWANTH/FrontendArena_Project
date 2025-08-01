@@ -1,0 +1,351 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background-color: #1f2937;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Toggle Button */
+button#darkModeToggle {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button#darkModeToggle:hover {
+  background-color: #45a049;
+}
+
+/* Home Section */
+#home {
+  background-color: #e2e8f0;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+#home h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+}
+
+/* About Section */
+#about {
+  padding: 4rem 2rem;
+}
+
+.about-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: background-color 0.3s;
+}
+
+.about-card:hover {
+  transform: scale(1.02);
+}
+
+.about-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+}
+
+/* Skills Section */
+#skills {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill-bar {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.skill-bar.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.skill-level {
+  width: 100%;
+  height: 14px;
+  background-color: #ddd;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff8c00, #ff3c00);
+  transition: width 2s ease;
+  border-radius: 7px;
+}
+
+.skill-bar:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Achievements Section */
+#achievements {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+#achievements h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.achievement-list {
+  display: grid;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.achievement {
+  background: #fff;
+  border-left: 6px solid #007bff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.achievement h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.achievement p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Contact Section */
+#contact {
+  padding: 4rem 2rem;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 0.75rem;
+  background-color: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #4b5563;
+}
+
+/* Animations */
+section {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Navbar Dark */
+.dark-mode nav {
+  background-color: #333;
+}
+
+/* Home Dark */
+.dark-mode #home {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* About Card Dark */
+.dark-mode .about-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Skills & Achievements Dark */
+.dark-mode #skills,
+.dark-mode #achievements {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.dark-mode .skill-bar,
+.dark-mode .achievement {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .skill-name,
+.dark-mode #skills h2,
+.dark-mode #achievements h2,
+.dark-mode .achievement h3 {
+  color: #ffffff;
+}
+
+.dark-mode .achievement p {
+  color: #cccccc;
+}
+
+/* Contact Dark */
+.dark-mode form input,
+.dark-mode form textarea {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode form button {
+  background-color: #555;
+}
+
+/* Header Position Fix (if needed) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.about-card,
+.skill-item {
+  position: relative;
+  z-index: 1;
+}
