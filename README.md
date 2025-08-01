@@ -21,7 +21,7 @@ The design is clean, modern, and fully responsive across all devices.
 
 ## 📸 Screenshots
 These following screenshots of website are included:
-![Home Page] (website images/Home Page Screenshot.png)
+![Home Page] (website_images/Home_Page_Screenshot.png)
 ![About Section]
 ![Skills Section]
 ![Contact Form]
